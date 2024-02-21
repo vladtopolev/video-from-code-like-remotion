@@ -1,0 +1,11 @@
+logs
+*.log
+npm-debug.log*
+node_modules/
+packages/server/dist/*
+packages/server/screenshots/*
+!packages/server/screenshots/.gitkeep
+.DS_Store
+video.mp4
+
+

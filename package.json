@@ -1,0 +1,16 @@
+{
+  "name": "personice",
+  "version": "0.0.1",
+  "description": "Remotion Prototy[e",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {},
+  "workspaces": [
+    "packages/server",
+    "packages/web"
+  ],
+  "scripts": {
+    "web": "yarn workspace web start",
+    "server": "yarn workspace server start"
+  }
+}
