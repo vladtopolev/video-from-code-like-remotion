@@ -9,9 +9,14 @@ const padWithLeadingZero = (num, totalLength) => String(num).padStart(totalLengt
 const runPuppeteer = async (projectPath) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
+    await page.setViewport({
+        width: 150,
+        height: 150
+    });
 
     // Navigate to the built React application URL
     await page.goto(`file://${projectPath}`);
+
 
     const { duration, fps } = await page.evaluate(() => ({ duration: window.duration, fps: window.fps }));
 

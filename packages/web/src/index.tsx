@@ -8,10 +8,10 @@ const AnimatedScene: React.FC = () => {
   return (
     <div
       style={{
-        width: 40,
-        height: 40,
+        width: 70,
+        height: 70,
         background: "green",
-        transform: `rotate(${frame}deg)`,
+        transform: `translate(50%, 50%) rotate(${frame}deg)`,
       }}
     />
   );
@@ -20,7 +20,7 @@ const AnimatedScene: React.FC = () => {
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 
 root.render(
-  <VideoContextProvider duration={2} fps={24}>
+  <VideoContextProvider duration={4} fps={24}>
     <AnimatedScene />
   </VideoContextProvider>
 );
